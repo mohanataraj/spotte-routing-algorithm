@@ -1,7 +1,7 @@
 # spotte-routing-algorithm
 The future of routing algorithms for Spotte Maps
 
-Zenodo DOI : this is the first commit of our DOI to claim improvisation novelty from current systems.
+Zenodo DOI : this is the first commit of our DOI
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21439010.svg)](https://doi.org/10.5281/zenodo.21439010)
 
 INTELLECTUAL PROPERTY NOTICE - scroll to the end
@@ -12,9 +12,10 @@ This document describes original research and technical concepts developed by th
 <img width="1536" height="1024" alt="driving_future" src="https://github.com/user-attachments/assets/6f2983f3-ebf6-46ff-81a9-9beefe80bd43" />
 People say "an image speaks a thousand words" and I'm just asking you to listen to the future, while we build it. 
 
+Research Note
 
-Exisitng Routing ETA & traffic prediction models - (all major mapping service) do have a model, but this is different from anything existing out there
-read the blog or DOI above for description and better understanding.
+This article explores an architectural concept referred to as a Traveler-Specific Temporal Journey Representation (TJR)—a computer-generated representation that synchronizes forecasted transportation network states with the predicted progression of an individual traveler through a transportation network. The concept is intended to support informed route evaluation prior to navigation rather than to replace existing traffic prediction or routing algorithms
+
 # Traditional Navigation
 
 ```text
