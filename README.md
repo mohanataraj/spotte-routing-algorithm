@@ -2,7 +2,8 @@
 
 **Temporal Journey Representation for Next-Generation Navigation**
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21439010.svg)](https://doi.org/10.5281/zenodo.21439010)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21443226.svg)](https://doi.org/10.5281/zenodo.21443226)
+
 
 > Research into traveler-specific temporal journey representations for predictive navigation and route decision support.
 
@@ -24,7 +25,8 @@ This repository accompanies the following archived technical disclosure.
 
 **Zenodo DOI**
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21439010.svg)](https://doi.org/10.5281/zenodo.21439010)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21443226.svg)](https://doi.org/10.5281/zenodo.21443226)
+
 
 ---
 
