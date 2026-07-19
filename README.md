@@ -1,6 +1,8 @@
 # spotte-routing-algorithm
 The future of routing algorithms for Spotte Maps
 
+Zenodo DOI : this is the first commit of our DOI to claim improvisation novelty from current systems.
+- 10.5281/zenodo.21439010
 
 <img width="1536" height="1024" alt="driving_future" src="https://github.com/user-attachments/assets/6f2983f3-ebf6-46ff-81a9-9beefe80bd43" />
 People say "an image speaks a thousand words" and I'm just asking you to read the future, while we build it. 
@@ -57,3 +59,142 @@ Enable Better Route Decisions
 | Reactive | Predictive |
 | Network-centric | User-centric |
 | Present-focused | Space-Time focused |
+
+```text
+                        Data Acquisition Layer
+─────────────────────────────────────────────────────────────────
+
+        GPS Trajectories        Fleet Telemetry
+              │                      │
+              ▼                      ▼
+
+ Google Maps / HERE / TomTom Traffic APIs
+
+              │
+              ▼
+
+        Dashcam Network (Crowdsourced Vision)
+
+              │
+              ▼
+
+      Roadside Traffic Cameras (CCTV)
+
+              │
+              ▼
+
+  Satellite / Aerial Imagery (2D Optical)
+        • Planet Labs
+        • Maxar
+        • Sentinel-2
+        • Airbus
+        • Near Real-Time Imagery
+
+              │
+              ▼
+
+ Weather
+ Events
+ Roadworks
+ Construction Permits
+ Emergency Incidents
+ V2X Messages
+ Parking Occupancy
+ IoT Road Sensors
+ Police / DOT Feeds
+
+─────────────────────────────────────────────────────────────────
+                    Sensor Fusion Layer
+─────────────────────────────────────────────────────────────────
+
+Computer Vision
+
+• Vehicle Detection
+• Lane Occupancy
+• Queue Length
+• Traffic Density
+• Average Velocity
+• Incident Detection
+• Construction Detection
+• Flood Detection
+• Smoke / Fire Detection
+• Road Blockage Detection
+
+              │
+              ▼
+
+Spatio-Temporal Graph Builder
+
+Road Graph +
+Live Edge State +
+Predicted Edge State
+
+─────────────────────────────────────────────────────────────────
+                Predictive Traffic Engine
+─────────────────────────────────────────────────────────────────
+
+Current Edge State
+
+↓
+
+Predict Traffic Evolution
+
+↓
+
+Predict Congestion Propagation
+
+↓
+
+Predict User Arrival at Every Edge
+
+↓
+
+Estimate Edge State
+at User Arrival Time
+
+↓
+
+Recursive Downstream ETA Update
+
+↓
+
+Confidence Estimation
+
+↓
+
+Route Stability Score
+
+↓
+
+Alternative Route Simulation
+
+─────────────────────────────────────────────────────────────────
+                User Experience Layer
+─────────────────────────────────────────────────────────────────
+
+Future Traffic Timeline
+
+↓
+
+Predictive Route Snapshots
+
+↓
+
+Congestion Arrival Forecast
+
+↓
+
+Expected Wait Time
+
+↓
+
+Confidence Visualization
+
+↓
+
+Driver Anxiety Reduction
+
+↓
+
+Personalized Route Recommendation
+```
