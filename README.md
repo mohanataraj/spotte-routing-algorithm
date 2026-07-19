@@ -3,6 +3,8 @@ The future of routing algorithms for Spotte Maps
 
 Zenodo DOI : this is the first commit of our DOI to claim improvisation novelty from current systems.
 - [10.5281/zenodo.21439010]
+- [10.5281/zenodo.21439010](https://doi.org)
+
 
 <img width="1536" height="1024" alt="driving_future" src="https://github.com/user-attachments/assets/6f2983f3-ebf6-46ff-81a9-9beefe80bd43" />
 People say "an image speaks a thousand words" and I'm just asking you to read the future, while we build it. 
