@@ -4,17 +4,10 @@ The future of routing algorithms for Spotte Maps
 Zenodo DOI : this is the first commit of our DOI to claim improvisation novelty from current systems.
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21439010.svg)](https://doi.org/10.5281/zenodo.21439010)
 
-INTELLECTUAL PROPERTY NOTICE
+INTELLECTUAL PROPERTY NOTICE - scroll to the end
 
 This document describes original research and technical concepts developed by the author.
 
-This work has been archived as a citable scientific publication under the following DOI:
-
-https://doi.org/10.5281/zenodo.21439010
-
-The concepts, systems, methods, algorithms, architectures, and implementations described herein may be the subject of one or more pending or future patent applications.
-
-Nothing in this publication shall be construed as granting any license, express or implied, to practice any invention disclosed herein. The author expressly reserves all intellectual property rights, including patent rights, copyrights, trade secrets, and all rights relating to future improvements, continuations, divisionals, continuations-in-part, and derivative inventions, to the fullest extent permitted by applicable law.
 
 <img width="1536" height="1024" alt="driving_future" src="https://github.com/user-attachments/assets/6f2983f3-ebf6-46ff-81a9-9beefe80bd43" />
 People say "an image speaks a thousand words" and I'm just asking you to read the future, while we build it. 
@@ -210,3 +203,15 @@ Driver Anxiety Reduction
 
 Personalized Route Recommendation
 ```
+
+INTELLECTUAL PROPERTY NOTICE
+
+This document describes original research and technical concepts developed by the author.
+
+This work has been archived as a citable scientific publication under the following DOI:
+
+https://doi.org/10.5281/zenodo.21439010
+
+The concepts, systems, methods, algorithms, architectures, and implementations described herein may be the subject of one or more pending or future patent applications.
+
+Nothing in this publication shall be construed as granting any license, express or implied, to practice any invention disclosed herein. The author expressly reserves all intellectual property rights, including patent rights, copyrights, trade secrets, and all rights relating to future improvements, continuations, divisionals, continuations-in-part, and derivative inventions, to the fullest extent permitted by applicable law.
