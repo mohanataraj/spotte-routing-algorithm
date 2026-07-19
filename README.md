@@ -1,185 +1,227 @@
-# spotte-routing-algorithm
-The future of routing algorithms for Spotte Maps
+# Spotte Routing Algorithm
 
-Zenodo DOI : this is the first commit of our DOI
+**Temporal Journey Representation for Next-Generation Navigation**
+
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21439010.svg)](https://doi.org/10.5281/zenodo.21439010)
 
-INTELLECTUAL PROPERTY NOTICE - scroll to the end
+> Research into traveler-specific temporal journey representations for predictive navigation and route decision support.
 
-This document describes original research and technical concepts developed by the author.
+---
 
+## Overview
+
+Modern navigation systems already employ sophisticated traffic prediction models to estimate travel times and optimize routes. However, travelers are typically presented with estimated arrival times (ETA), current traffic overlays, and route recommendations rather than a representation of the conditions they are expected to encounter throughout their journey.
+
+This repository explores a **Traveler-Specific Temporal Journey Representation (TJR)**—a navigation architecture that synchronizes predicted transportation network states with the predicted progression of an individual traveler through a transportation network.
+
+Rather than replacing existing routing algorithms or traffic prediction models, this work investigates how predicted transportation states can be synchronized, represented, and communicated to improve route evaluation before navigation begins.
+
+---
+
+## Research DOI
+
+This repository accompanies the following archived technical disclosure.
+
+**Zenodo DOI**
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21439010.svg)](https://doi.org/10.5281/zenodo.21439010)
+
+---
+
+## Vision
+
+> *"An image speaks a thousand words. This one simply asks you to listen to the future while we build it."*
 
 <img width="1536" height="1024" alt="driving_future" src="https://github.com/user-attachments/assets/6f2983f3-ebf6-46ff-81a9-9beefe80bd43" />
-People say "an image speaks a thousand words" and I'm just asking you to listen to the future, while we build it. 
 
-Research Note
+---
 
-This article explores an architectural concept referred to as a Traveler-Specific Temporal Journey Representation (TJR)—a computer-generated representation that synchronizes forecasted transportation network states with the predicted progression of an individual traveler through a transportation network. The concept is intended to support informed route evaluation prior to navigation rather than to replace existing traffic prediction or routing algorithms
-
-# Traditional Navigation
+# Existing Navigation
 
 ```text
-Current Traffic
-       │
-       ▼
-Best Route
-       │
-       ▼
-Explain Decision
+Origin + Destination
+        │
+        ▼
+Future Traffic Prediction
+        │
+        ▼
+Route Optimization
+        │
+        ▼
+ETA
+        │
+        ▼
+Navigate
 ```
 
 ---
 
-# Predictive Temporal Navigation (Proposed)
+# Traveler-Specific Temporal Journey Representation (Proposed)
 
 ```text
-Current Data
-       │
-       ▼
-Forecast Future Traffic
-       │
-       ▼
-Forecast YOUR Arrival
-       │
-       ▼
-Synchronize Arrival Time
-with Future Traffic
-       │
-       ▼
-Visualize Future Journey
-       │
-       ▼
-Enable Better Route Decisions
+Origin + Destination
+        │
+        ▼
+Future Traffic Prediction
+        │
+        ▼
+Predict Arrival at Every Route Segment
+        │
+        ▼
+Synchronize Forecast with Traveler Progression
+        │
+        ▼
+Construct Traveler-Specific
+Temporal Journey Representation
+        │
+        ▼
+Present Candidate Journeys
+        │
+        ▼
+User Selects Route
 ```
+
+---
+
+# Research Motivation
+
+Drivers do not travel through the present.
+
+They travel through the future.
+
+Traditional navigation systems primarily communicate:
+
+- Current traffic conditions
+- Estimated arrival time
+- Route recommendations
+
+This research investigates whether navigation systems can instead communicate:
+
+- Expected traffic at user arrival
+- Predicted roadway conditions
+- Forecasted incidents
+- Confidence metrics
+- Route stability
+- A traveler-specific representation of the journey before navigation begins
+
+The objective is not to improve traffic prediction itself, but to improve how those predictions are synchronized and presented for route evaluation.
 
 ---
 
 # Comparison
 
-| Traditional Navigation | Predictive Temporal Navigation |
-|-------------------------|--------------------------------|
-| Current traffic | Future traffic forecast |
-| Current road state | Future road state at user arrival |
-| Computes fastest route | Simulates future journey |
-| Explains why a route was chosen | Predicts what the user will experience |
-| ETA is the output | Future journey is the output |
-| Reactive | Predictive |
-| Network-centric | User-centric |
-| Present-focused | Space-Time focused |
+| Existing Navigation | Traveler-Specific Temporal Journey Representation |
+|---------------------|--------------------------------------------------|
+| Current traffic overlays | Future transportation state synchronized with traveler arrival |
+| ETA-centric | Journey-centric |
+| Route recommendation | Journey representation |
+| Network state | Traveler-specific state |
+| Current conditions | Predicted conditions at arrival |
+| Reactive updates | Predictive evaluation |
+| Space | Space + Time |
+
+---
+
+# System Architecture
 
 ```text
-                        Data Acquisition Layer
-─────────────────────────────────────────────────────────────────
+                    Data Acquisition Layer
+──────────────────────────────────────────────────────────────────
 
-        GPS Trajectories        Fleet Telemetry
-              │                      │
-              ▼                      ▼
+ Navigation Provider Traffic APIs
+ (Google Maps • HERE • TomTom • etc.)
 
- Google Maps / HERE / TomTom Traffic APIs
+                 │
+                 ▼
 
-              │
-              ▼
+ Crowdsourced Dashcam Network
 
-        Dashcam Network (Crowdsourced Vision)
+                 │
+                 ▼
 
-              │
-              ▼
+ Roadside Traffic Cameras
 
-      Roadside Traffic Cameras (CCTV)
+                 │
+                 ▼
 
-              │
-              ▼
+ Satellite & Aerial Imagery
 
-  Satellite / Aerial Imagery (2D Optical)
-        • Planet Labs
-        • Maxar
-        • Sentinel-2
-        • Airbus
-        • Near Real-Time Imagery
-
-              │
-              ▼
+                 │
+                 ▼
 
  Weather
- Events
  Roadworks
- Construction Permits
- Emergency Incidents
- V2X Messages
- Parking Occupancy
- IoT Road Sensors
- Police / DOT Feeds
+ Construction
+ Special Events
+ Historical Traffic Data
+ Vehicle Telemetry
+ Connected Vehicles (V2X)
+ Government Transportation Data
 
-─────────────────────────────────────────────────────────────────
-                    Sensor Fusion Layer
-─────────────────────────────────────────────────────────────────
+──────────────────────────────────────────────────────────────────
+                     Sensor Fusion Layer
+──────────────────────────────────────────────────────────────────
+
+Normalize Data
+
+↓
 
 Computer Vision
 
-• Vehicle Detection
-• Lane Occupancy
-• Queue Length
-• Traffic Density
-• Average Velocity
-• Incident Detection
-• Construction Detection
-• Flood Detection
-• Smoke / Fire Detection
-• Road Blockage Detection
+↓
 
-              │
-              ▼
-
-Spatio-Temporal Graph Builder
-
-Road Graph +
-Live Edge State +
-Predicted Edge State
-
-─────────────────────────────────────────────────────────────────
-                Predictive Traffic Engine
-─────────────────────────────────────────────────────────────────
-
-Current Edge State
+Traffic State Estimation
 
 ↓
 
-Predict Traffic Evolution
+Spatio-Temporal Road Graph
 
 ↓
 
-Predict Congestion Propagation
+Transportation State Forecasting
+
+──────────────────────────────────────────────────────────────────
+        Traveler Synchronization Engine
+──────────────────────────────────────────────────────────────────
+
+Generate Candidate Routes
 
 ↓
 
-Predict User Arrival at Every Edge
+Predict Traveler Arrival
+at Every Route Segment
 
 ↓
 
-Estimate Edge State
-at User Arrival Time
+Synchronize Arrival Times
+with Transportation Forecast
 
 ↓
 
-Recursive Downstream ETA Update
+Recursive ETA Propagation
 
 ↓
 
-Confidence Estimation
+Update Downstream Predictions
 
 ↓
 
-Route Stability Score
+Estimate Confidence
 
 ↓
 
-Alternative Route Simulation
+Compute Route Stability
 
-─────────────────────────────────────────────────────────────────
-                User Experience Layer
-─────────────────────────────────────────────────────────────────
+↓
 
-Future Traffic Timeline
+Construct Traveler-Specific
+Temporal Journey Representation
+
+──────────────────────────────────────────────────────────────────
+                  Decision Support Layer
+──────────────────────────────────────────────────────────────────
+
+Future Journey Timeline
 
 ↓
 
@@ -187,33 +229,67 @@ Predictive Route Snapshots
 
 ↓
 
+Journey Confidence
+
+↓
+
 Congestion Arrival Forecast
 
 ↓
 
-Expected Wait Time
+Expected Delays
 
 ↓
 
-Confidence Visualization
+Traveler Decision Support
 
 ↓
 
-Driver Anxiety Reduction
-
-↓
-
-Personalized Route Recommendation
+Navigation
 ```
 
-INTELLECTUAL PROPERTY NOTICE
+---
 
-This document describes original research and technical concepts developed by the author.
+# Research Scope
+
+Potential heterogeneous data sources include:
+
+- Navigation traffic providers
+- Fleet telemetry
+- Crowdsourced dashcams
+- Roadside traffic cameras
+- Satellite imagery
+- Aerial imagery
+- Vehicle telemetry
+- Weather services
+- Roadworks
+- Construction activity
+- Scheduled events
+- Connected vehicle messages
+- Government transportation feeds
+
+The synchronization architecture is independent of the specific traffic forecasting model and may operate with statistical, physics-based, graph-based, or machine-learning forecasting techniques.
+
+---
+
+# Research Status
+
+This repository represents ongoing research into temporal navigation architectures and traveler-specific journey representations.
+
+The concepts described here are intended to stimulate research into decision-support systems for intelligent transportation and should not be interpreted as a replacement for existing navigation or traffic prediction systems.
+
+---
+
+# Intellectual Property Notice
+
+This repository describes original research and technical concepts developed by the author.
 
 This work has been archived as a citable scientific publication under the following DOI:
 
-https://doi.org/10.5281/zenodo.21439010
+**https://doi.org/10.5281/zenodo.21439010**
 
-The concepts, systems, methods, algorithms, architectures, and implementations described herein may be the subject of one or more pending or future patent applications.
+The concepts, systems, methods, algorithms, architectures, traveler-specific temporal journey representations, synchronization methods, and implementations described herein may be the subject of one or more pending or future patent applications.
 
-Nothing in this publication shall be construed as granting any license, express or implied, to practice any invention disclosed herein. The author expressly reserves all intellectual property rights, including patent rights, copyrights, trade secrets, and all rights relating to future improvements, continuations, divisionals, continuations-in-part, and derivative inventions, to the fullest extent permitted by applicable law.
+Nothing contained in this repository shall be construed as granting any license, express or implied, to practice any invention disclosed herein.
+
+The author expressly reserves all intellectual property rights, including patent rights, copyrights, trade secrets, continuations, divisionals, continuations-in-part, derivative works, and future improvements to the fullest extent permitted by applicable law.
