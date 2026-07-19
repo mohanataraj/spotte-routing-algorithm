@@ -10,10 +10,11 @@ This document describes original research and technical concepts developed by th
 
 
 <img width="1536" height="1024" alt="driving_future" src="https://github.com/user-attachments/assets/6f2983f3-ebf6-46ff-81a9-9beefe80bd43" />
-People say "an image speaks a thousand words" and I'm just asking you to read the future, while we build it. 
+People say "an image speaks a thousand words" and I'm just asking you to listen to the future, while we build it. 
 
 
-Exisitng Routing ETA & traffic prediction models - (all major mapping service)
+Exisitng Routing ETA & traffic prediction models - (all major mapping service) do have a model, but this is different from anything existing out there
+read the blog or DOI above for description and better understanding.
 # Traditional Navigation
 
 ```text
