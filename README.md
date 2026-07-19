@@ -288,7 +288,7 @@ This repository describes original research and technical concepts developed by 
 
 This work has been archived as a citable scientific publication under the following DOI:
 
-**https://doi.org/10.5281/zenodo.21439010**
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21443226.svg)](https://doi.org/10.5281/zenodo.21443226)
 
 The concepts, systems, methods, algorithms, architectures, traveler-specific temporal journey representations, synchronization methods, and implementations described herein may be the subject of one or more pending or future patent applications.
 
